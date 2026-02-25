@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Resume</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Your Generated Resume</h1>
+
+    <pre class="resume-box">{{ resume }}</pre>
+
+    <form action="/download" method="POST">
+        <input type="hidden" name="resume" value="{{ resume }}">
+        <button type="submit">Download PDF</button>
+    </form>
+
+    <a href="/">Create Another Resume</a>
+</div>
+
+</body>
+</html>
